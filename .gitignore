@@ -1,0 +1,27 @@
+.DS_Store
+*.sqlite3
+htmlcov/
+
+# Byte-compiled / optimized / DLL files / cache / dumps
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.cache
+.coverage
+
+# Environments
+.env
+.python-version
+_data/
+
+# Editors
+.idea/
+.vscode/
+
+*.egg-info
+
+dist/
+build/
+
+.mypy_cache/
+*.pem
