@@ -1,17 +1,14 @@
 version: 2.1
 aliases:
-  # Default CI build arguments
   - &defaults
     working_directory: ~/app
     machine:
       docker_layer_caching: true
 
-  # Authenticate to Docker Hub
   - &authenticate-dockerhub
     name: Authenticate to Docker Hub
     command: echo "$DOCKER_HUB_PWD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
 
-  # Build image
   - &build-image
     name: Build image
     command: ./config/build-image
