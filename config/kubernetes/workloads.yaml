@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-stream
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-stream
+
+  template:
+    metadata:
+      labels:
+        app: event-stream
+    spec:
+      containers:
+        - name: event-stream
+          image: evestidor/event-stream:master
